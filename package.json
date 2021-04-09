@@ -1,0 +1,26 @@
+{
+  "name": "jsonrpc-proxy",
+  "version": "1.0.0",
+  "main": "lib/jsonRpcProxy.js",
+  "license": "Apache-2.0",
+  "description": "JSON-RPC 2.0 client library written with strongly-typed proxy.",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/vidderhorn/jsonrpc-proxy.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "ky": "^0.25.1",
+    "ky-universal": "^0.8.2",
+    "nanoid": "^3.1.22"
+  },
+  "scripts": {
+    "build": "tsc --paths null",
+    "clean": "rm -rf lib"
+  }
+}
