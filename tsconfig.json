@@ -9,7 +9,11 @@
     "noImplicitReturns": true,
     "sourceMap": true,
     "declaration": true,
-   "outDir": "lib"
+    "outDir": "lib",
+    "baseUrl": ".",
+    "paths": {
+      "jsonrpc-types": ["../jsonrpc-types/src/types"]
+    }
   },
-  "files": ["src/jsonRpcProxy.ts"]
+  "files": ["src/proxy.ts"]
 }

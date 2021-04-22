@@ -1,7 +1,7 @@
 {
   "name": "jsonrpc-proxy",
   "version": "1.0.0",
-  "main": "lib/jsonRpcProxy.js",
+  "main": "lib/proxy.js",
   "license": "Apache-2.0",
   "description": "JSON-RPC 2.0 client library written with strongly-typed proxy.",
   "repository": {

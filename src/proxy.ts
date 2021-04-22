@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import ky from "ky-universal";
+import { Request, Response } from "jsonrpc-types";
 
 const TIME_LIMIT = 5000;
 
@@ -69,33 +70,6 @@ export module JsonRpcProxy {
         return ky.post(url, { json: request, headers }).json();
       };
     }
-  }
-
-  export interface Request<Params> {
-    jsonrpc: "2.0";
-    method: string;
-    params: Params;
-    id?: string | number;
-  }
-
-  export type Response<Value> = Success<Value> | Failure;
-
-  export interface Success<Value> {
-    jsonrpc: "2.0";
-    result: Value;
-    id: string | number;
-  }
-
-  export interface Failure {
-    jsonrpc: "2.0";
-    error: Error;
-    id: string | number;
-  }
-
-  export interface Error {
-    code: number;
-    message: string;
-    data: any;
   }
 }
 
